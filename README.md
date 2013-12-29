@@ -4,12 +4,12 @@ gitian.sigs.mdc
 Trusted Build Process signatures
 
 
-This repository contains gitian signatures for Litecoin.  It should be updated on each release.
+This repository contains gitian signatures for Mediterraneancoin.  It should be updated on each release.
 Random members of the public are encouraged to participate in this process in order to better secure the integrity of the Gitian builds.
 
 ## Generating Gitian Sigs
 
- Checkout litecoin, gitian-builder and gitian.sigs.ltc
+ Checkout mediterraneancoin, gitian-builder and gitian.sigs.mdc
 
 	mkdir workdir
 	cd workdir
