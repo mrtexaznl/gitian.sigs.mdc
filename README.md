@@ -52,9 +52,9 @@ Random members of the public are encouraged to participate in this process in or
 
  Build mediterraneancoind and mediterraneancoin-qt on Linux32, Linux64, and Win32:
 
-	./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
+	sudo ./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
+	sudo ./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
+	sudo ./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
+	sudo ./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
 
  It is customary to rename your directories in gitian.sigs.mdc to match your github username.  Submit a Pull Request against this repo.  If you are uncertain, please see previous commits for examples.
