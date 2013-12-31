@@ -48,7 +48,7 @@ Random members of the public are encouraged to participate in this process in or
  Choose your GPG identity and git tag VERSION that you wish to build.
 
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
-	export VERSION=0.8.0
+	export VERSION=master-0-8
 
  Build mediterraneancoind and mediterraneancoin-qt on Linux32, Linux64, and Win32:
 
