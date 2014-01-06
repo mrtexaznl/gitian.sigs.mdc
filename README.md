@@ -20,9 +20,9 @@ Random members of the public are encouraged to participate in this process in or
  Create Gitian Base VM Images
 
 	cd ./gitian-builder
-        bin/make-base-vm --arch i386
-        bin/make-base-vm --arch amd64
-        bin/make-base-vm --arch amd64 --suite precise
+        sudo bin/make-base-vm --arch i386
+        sudo bin/make-base-vm --arch amd64
+        sudo bin/make-base-vm --arch amd64 --suite precise
 
  Fetch and build inputs: (first time, zor when dependency versions change)
 
@@ -48,13 +48,13 @@ Random members of the public are encouraged to participate in this process in or
  Choose your GPG identity and git tag VERSION that you wish to build.
 
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
-	export VERSION=0.8.0
+	export VERSION=master-0-8
 
  Build mediterraneancoind and mediterraneancoin-qt on Linux32, Linux64, and Win32:
 
-	./bin/gbuild --commit mediterraneancoin=v${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
-	./bin/gbuild --commit mediterraneancoin=v${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
+	sudo ./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
+	sudo ./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian.yml
+	sudo ./bin/gbuild --commit mediterraneancoin=${VERSION} ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
+	sudo ./bin/gsign --signer $SIGNER --release ${VERSION}-win32 --destination ../gitian.sigs.mdc/ ../mediterraneancoin/contrib/gitian-descriptors/gitian-win32.yml
 
  It is customary to rename your directories in gitian.sigs.mdc to match your github username.  Submit a Pull Request against this repo.  If you are uncertain, please see previous commits for examples.
